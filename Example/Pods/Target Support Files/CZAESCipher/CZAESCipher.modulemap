@@ -1,0 +1,6 @@
+framework module CZAESCipher {
+  umbrella header "CZAESCipher-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 //
 
 @import XCTest;
+#import "CZAESCipher.h"
 
 @interface Tests : XCTestCase
 
@@ -26,9 +27,18 @@
     [super tearDown];
 }
 
+static NSString *const kSecretKey = @"1234567812345678";
+static NSString *const kInitialVector = @"8765432187654321";
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    // 使用时建议在封装一层，不要直接暴露 kSecretKey 和 kInitialVector
+    NSString *plainText = @"123456";
+    NSString *cipherText = [CZAESCipher encrypt:plainText secretKey:kSecretKey iv:kInitialVector];
+    
+    NSString *result = [CZAESCipher decrypt:cipherText secretKey:kSecretKey iv:kInitialVector];
+    
+    NSLog(@"%@", cipherText);
+    NSLog(@"%@", result);
 }
 
 @end

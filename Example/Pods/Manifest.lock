@@ -1,0 +1,16 @@
+PODS:
+  - CZAESCipher (0.1.0)
+
+DEPENDENCIES:
+  - CZAESCipher (from `../`)
+
+EXTERNAL SOURCES:
+  CZAESCipher:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CZAESCipher: 866c00a61f2001102e1d1fe9ef2bebe95350dee9
+
+PODFILE CHECKSUM: c67b88696147f0f45bcb203fb8fa68ee0fefaaa0
+
+COCOAPODS: 1.11.2
